@@ -1,0 +1,896 @@
+*{
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+.header{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 10px 30px 10px 30px;
+  box-shadow: 0px 0px 5px black;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+
+  transition: top 0.5s;
+}
+
+.bar-wrap{
+  display: none;
+}
+
+.bar-wrap i{
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.drink-lft img{
+  width: 80px;
+}
+
+.mid{
+  display: block
+}
+
+.logo-div img{
+  width: 80px;
+  display: none;
+}
+
+.rgt img{
+  width: 70px;
+}
+
+.name{
+  font-weight: 900;
+  font-size: 30px;
+  font-family: "Matemasie", sans-serif;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.name-div p{
+  font-weight: 900;
+  font-size: 50px;
+  font-family: "Qwitcher Grypen", cursive;
+  margin: 0px;
+}
+
+
+.sidebar{
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: rgb(37, 37, 37);
+  overflow-x: hidden;
+  padding-top: 140px;
+
+  transition: 0.5s;
+}
+
+#body{
+  transition: .5s;
+}
+
+.sidebar a:not(.close-btn){
+  padding: 12px 8px 12px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidebar a i {
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.sidebar a:hover:not(.close-btn) {
+  color: rgb(241, 241, 241);
+
+  transform: scale(1.2, 1.2);
+}
+
+
+
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 130px;
+  
+}
+
+ul li{
+  padding: 0px 10px;
+}
+
+li a{
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 700;
+  font-family: "Germania One", system-ui;
+  transition:  150ms;
+}
+
+
+.page{
+  border-bottom: 4px solid black;
+  transform: scale(1.1, 1.1);
+}
+
+li a:hover:not(.page){
+  border-bottom: 4px solid black;
+  transform: scale(1.1, 1.1);
+}
+
+
+
+.top-btn{
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  z-index: 100;
+  cursor: pointer;
+  padding: 20px 15px;
+  border-radius: 10px;
+  background-color: rgb(164, 167, 172);
+  display: none;
+}
+
+.top-btn:hover{
+
+  background-color: black;
+}
+
+.top-btn i{
+  font-size: 20px;
+  color: white;
+}
+
+.title{
+  
+  height: 100px;
+  margin-top: 50px;
+}
+
+
+.title h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Germania One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 10px;
+  font-size: 51px;
+  
+}
+
+
+.storyTitle{
+
+  height: 75px;
+  width: 100%;
+  padding: 10px 0px 0px 40px;
+
+}
+
+.storyTitle span{
+  width: 30%;
+  
+  font-size: 50px;
+  font-family: "Bilbo Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: capitalize;
+ 
+
+}
+
+
+
+.storyTitle2{
+
+  height: 50px;
+  width: 100%;
+  padding: 0px 0px 0px 40px;
+
+}
+
+.storyTitle2 span{
+
+  width: 30%;
+  
+  font-size: 50px;
+  font-family: "Bilbo Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: capitalize;
+ 
+
+}
+
+
+
+
+.storyText4{
+  width: 100%;
+  padding: 0px 40px;
+ 
+}
+
+.storyText4 p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  margin: 0px;
+  
+ 
+}
+
+
+.aboutImage{
+
+  height: 200px;
+  width: 100%;
+  padding: 10px 35px;
+}
+
+.profileBox{
+  height: 100%;
+  width: 50%;
+  float: left;
+  background-color: #f9f9f9;
+  padding: 10px 10px;
+}
+
+.profileImg{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  float: left;
+}
+
+.profileImg img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 100%;
+ 
+}
+
+.profileText{
+ height: 150px;
+ width: 225px;
+ float: left;
+ padding: 20px  20px;
+}
+
+.profileText span{
+  font-family: Helvetica, sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+ }
+ .profileText p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(227, 76, 76);
+ }
+
+.slide{
+  border-bottom: 1px solid rgb(206, 203, 203);
+  width: 100px;
+  width: 100%;
+  padding: 0px 50px;
+}
+
+#item{
+
+  width: 100%;
+}
+
+.owl-carousel {
+  display: flex;
+}
+
+.nonloop{
+  position: relative;
+}
+
+.nonloop .fa-angle-left{
+  position: absolute;
+  left: 10px;
+  top: 36%;
+  font-size: 70px;
+  color: whitesmoke;
+}
+
+.nonloop  .fa-angle-right{
+  position: absolute;
+  right: 10px;
+  top: 36%;
+  font-size: 70px;
+ color: whitesmoke;
+ font-weight: 100;
+ font: 100;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.item img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+  transition: transform 0.3s ease; 
+}
+
+.item:hover img {
+  transform: scale(1.05); 
+}
+
+.item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(103, 99, 99, 0.5); 
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.item:hover::after {
+  opacity: 1;
+}
+
+.info{
+
+  border: 2px solid black;
+  height: 100px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+ 
+  font-size: 14px;
+  padding:40px 0px 0px 200px;
+  
+ 
+}
+
+.special-car{
+
+  border: 2px solid black;
+  height: 40px;
+  width: 80%;
+  
+  
+}
+
+.info span{
+
+  font-family: "Saira",sans-serif;
+  color: #A0A09F;
+  text-transform: uppercase;
+  padding: 90px;
+  
+}
+
+.info a{
+  text-decoration: none;
+  color: #A0A09F;
+}
+
+
+.infoImg{
+
+  border: 2px solid black;
+
+  height: 100%;
+  width:10% ;
+  float: left;
+}
+ /* Footer styling */
+ .footer {
+  color: #A0A09F;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ /* Footer content container */
+ .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; 
+}
+  /* Footer text styling */
+  .footer-text p{
+    font-size: 14px;
+    line-height: 1.5; 
+    margin-right: 20px; 
+    text-align: left; 
+    text-transform: uppercase;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Image and icons container */
+.image-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; 
+}
+
+ /* Icon styling */
+ .icon {
+  font-size: 20px;
+  color: #A0A09F;
+  margin-left: 15px; 
+}
+/* Image styling */
+.footer img {
+  width: 100px;
+  height: auto;
+  margin-left: 0px; 
+}
+  /* Link styling */
+  .footer-text a  {
+    color: #A0A09F;
+    text-decoration: underline;
+    margin: 0 0px; 
+    text-transform: uppercase;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.image-icons a  {
+  color: black;
+  margin: 0 5px; 
+  font-size: 20px;
+}
+
+.active a{
+  text-decoration: none;
+}
+
+.footerImg{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px){
+
+  .nav{
+    display: none;
+  }
+
+  .rgt img{
+    width: 0px;
+  }
+
+  .drink-lft{
+    display: none;
+  }
+
+  .name{
+    font-size: 20px;
+    display: none;
+  }
+
+  .mid{
+    display: block;
+  }
+
+  
+  .name-div p{
+    font-size: 25px;
+    font-family: "Qwitcher Grypen", cursive;
+  }
+  
+  .logo-div{
+    text-align: center;
+    align-items: center;
+  }
+  
+  .logo-div img{
+    width: 50px;
+    display: block;
+    margin: auto;
+  }
+  
+  .bar-wrap{
+    display: inline-block;
+  }
+  
+  .bar-wrap i{
+    font-size: 20px;
+  }
+
+  .header{
+    box-shadow: inset 0px 0px 5px black;
+    position: sticky;
+  }
+  
+  .sidebar{
+    z-index: 300;
+    padding-top: 70px;
+  }
+  
+  .sidebar .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    text-decoration: none;
+    color: white;
+  }
+
+
+  .title{
+
+    height: 60px;
+    margin: 0px;
+    
+  }
+
+  
+.title h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Germania One", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin: 10px;
+
+}
+
+
+.storyTitle{
+
+  height: 50px;
+  width: 100%;
+  padding: 0px 0px 0px 40px;
+
+}
+
+.storyTitle span{
+
+  height: 70px;
+  
+  font-size: 30px;
+  font-family: "Bilbo Swash Caps", cursive;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: capitalize;
+ 
+
+}
+
+
+.storyTitle2{
+
+  height: 50px;
+  width: 100%;
+  
+  padding: 0px 0px 0px 40px;
+
+}
+
+.storyTitle2 span{
+
+  
+  font-size: 30px;
+  font-family: "Bilbo Swash Caps", cursive;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: capitalize;
+  margin: 0px;
+ 
+
+}
+
+
+.storyText4{
+  
+  width: 100%;
+  padding: 0px 40px;
+ 
+}
+
+.storyText4 p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  margin: 0px;
+  
+ 
+}
+
+.aboutImage{
+
+  height: 120vh;
+  padding: 20px;
+  
+  
+  
+ }
+ 
+ .profileBox{
+  width: 100%;
+  height: 50%;
+  background-color: #f9f9f9;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileText{
+  height: 150px;
+  width: 100%;
+  padding: 20px  20px;
+  text-align: center;
+ 
+ }
+
+ 
+.profileImg{
+  height: 300px;
+  width: 300px;
+  border-radius: 100%; 
+  justify-self: center;
+ 
+}
+  
+
+
+
+  .footer-content {
+    flex-direction: column;
+}
+.footer-text {
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+.image-icons {
+    margin-top: 10px;
+}
+
+
+.footer {
+  padding: 15px; 
+}
+
+.footer-content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text p {
+  font-size: 12px; 
+  margin-right: 0; 
+  text-align: center; 
+}
+
+.image-icons {
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.footer img {
+  width: 80px; 
+}
+
+.icon {
+  font-size: 18px; /* Adjust icon size */
+}
+  
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+  .name{
+    font-size: 20px;
+    display: none;
+  }
+
+  .drink-lft{
+    display: none;
+  }
+
+  .mid{
+    display: block;
+  }
+
+  .name-div p{
+    font-size: 10px;
+    font-family: "Qwitcher Grypen", cursive;
+  }
+
+  .logo-div{
+    text-align: center;
+  }
+
+  .logo-div img{
+    width: 50px;
+  }
+
+  .body{
+
+    /* border: 2px solid black; */
+    height: 200vh;
+    overflow: scroll;
+  
+  }
+  
+  .storyTitle{
+  
+    height: 40px;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0px 0px 0px 40px;
+  
+  }
+  
+  .storyTitle span{
+  
+    /* border: 2px solid black; */
+    /* height: 70px; */
+    /* width: 30%; */
+    /* display: inline-block; */
+    /* margin: 20px 0px 0px 25px; */
+    
+    font-size: 25px;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+   
+  
+  }
+  
+  
+  
+  .storyTitle2{
+  
+    height: 40px;
+    width: 100%;
+    /* border: 2px solid black; */
+    padding: 0px 0px 0px 40px;
+  
+  }
+  
+  .storyTitle2 span{
+  
+    /* border: 2px solid black; */
+    font-size: 25px;
+    font-family: "Bilbo Swash Caps", cursive;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+    margin: 0px;
+   
+  
+  }
+  
+ 
+
+   
+  .storyText4{
+    /* border: 2px solid black; */
+    /* height: 120px; */
+    width: 100%;
+    padding: 0px 40px;
+   
+  }
+  
+  .storyText4 p{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    margin: 0px;
+    
+   
+  }
+
+  
+.aboutImage{
+
+  /* border: 2px solid rgb(250, 56, 56); */
+  height: 110vh;
+  padding: 20px;
+  /* background-color: #A0A09F; */
+  
+  
+ }
+ 
+ .profileBox{
+  /* border: 2px solid rgb(255, 0, 0); */
+  width: 100%;
+  height: 50%;
+  /* float: left; */
+  background-color: #f9f9f9;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileText{
+  /* border: 2px solid rgb(20, 20, 20); */
+  height: 120px;
+  width: 100%;
+  /* float: left; */
+  padding: 20px  20px;
+  text-align: center;
+ 
+ }
+
+ 
+.profileImg{
+  /* border: 2px solid black; */
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  /* float: left; */
+  justify-self: center;
+ 
+}
+  
+
+}
